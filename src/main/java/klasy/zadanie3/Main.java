@@ -4,7 +4,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("Obwód koła: " + Matma.obwodKola(5));
+        try {
+            System.out.println("Obwód koła: " + Matma.obwodKola(-5));
+        } catch (LiczbaUjemnaException e) {
+            System.out.println("Promień koła nie może być ujemny!");
+        }
         System.out.println("Pole koła: " + Matma.poleKola(5));
         System.out.println("Obwód prostokąta: " + Matma.obwodProstokata(4, 5));
         System.out.println("Pole prostokąta: " + Matma.poleProstokata(5, 3));

@@ -5,6 +5,9 @@ public class Matma {
     public static final double PI = Math.PI;
 
     public static double obwodKola(double promienKola) {
+        if (promienKola < 0) {
+            throw new LiczbaUjemnaException();
+        }
         return 2 * PI * promienKola;
     }
 
