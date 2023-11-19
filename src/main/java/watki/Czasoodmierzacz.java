@@ -3,13 +3,15 @@ package watki;
 public class Czasoodmierzacz implements Runnable{
     @Override
     public void run() {
-        try {
-            for (int i = 1; i <= 15; i++) {
-                System.out.println(i);
+        int time = 0;
+        while (true) {
+            try {
                 Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                System.out.println("Something went wrong");
             }
-        } catch (InterruptedException e) {
-            System.out.println("Something went wrong");
+            time++;
+            System.out.println("Minęło " + time + " sek");
         }
     }
 }
